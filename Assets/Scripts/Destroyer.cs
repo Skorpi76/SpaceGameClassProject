@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Destroyer : MonoBehaviour {
-    
-    public void OnTriggerExit2D(Collider2D collision)
+
+    void OnTriggerExit2D(Collider2D other)
     {
-        
+        Destroy(other.gameObject);
     }
 }

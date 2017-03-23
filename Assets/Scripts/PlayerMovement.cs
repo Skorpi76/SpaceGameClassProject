@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour {
 
     // Privat fields
     private Rigidbody2D rb;
-    private float nextFire = 0.5f; // how often the player can shoot
+    private float nextFire = 0.3f; // how often the player can shoot
     private float myTime = 0.0f; // Var to hold our time 
     //Initialize our vars
     void Start()
