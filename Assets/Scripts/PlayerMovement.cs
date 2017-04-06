@@ -12,10 +12,12 @@ public class PlayerMovement : MonoBehaviour {
     private Rigidbody2D rb;
     private float nextFire = 0.3f; // how often the player can shoot
     private float myTime = 0.0f; // Var to hold our time 
+    private AudioSource audio;
     //Initialize our vars
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        audio = GetComponent<AudioSource>();
     }
 
 
@@ -24,6 +26,7 @@ public class PlayerMovement : MonoBehaviour {
         myTime += Time.deltaTime; 
         if (Input.GetButton("Fire1") && myTime > nextFire)
         {
+            audio.Play();
             Instantiate(laser, laserSpawn.position, laserSpawn.rotation);
             myTime = 0.0f;
         }
